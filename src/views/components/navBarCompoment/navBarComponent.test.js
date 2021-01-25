@@ -1,10 +1,10 @@
-// for sample
+import { render, screen } from '@testing-library/react'
+import Navbar from './navBarComponent'
 
-// import { render, screen } from '@testing-library/react';
-// import App from './App';
-//
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
+// eslint-disable-next-line no-undef
+test('hello world', () => {
+  render(<Navbar />)
+  const linkElement = screen.getByText(/hello world/i)
+  // eslint-disable-next-line no-undef
+  expect(linkElement).toBeInTheDocument()
+})
