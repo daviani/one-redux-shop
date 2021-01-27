@@ -6,6 +6,6 @@ test('should display greeting message', () => {
   render(<Navbar/>)
 
   // then
-  const linkElement = screen.getByText( /hello world/i )
+  const linkElement = screen.getByText( /OneReduxShop/i )
   expect(linkElement).toBeInTheDocument()
 })
