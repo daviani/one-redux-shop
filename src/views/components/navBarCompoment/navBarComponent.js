@@ -6,18 +6,16 @@ function NavBar () {
     <nav>
       <header
         className='border-b sticky top-0 bg-white z-10 md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4'>
-        <div className='flex items-center justify-between mb-4 md:mb-0'>
+        <div className='flex items-center space mb-4 md:mb-0'>
           <a
             href='/'
             className='leading-none'
           >
-            <div className='flex'>
               <p
                 className='no-underline text-gray-600 text-2xl text-bold  hover:text-purple-800'
               >
                 OneReduxShop
               </p>
-            </div>
           </a>
           <ul className=' ml-6 flex'>
             <li className='toggleable '>
@@ -77,7 +75,7 @@ function NavBar () {
             type='search'
           />
         </form>
-        <nav>
+        <div className='2xl:ml-48'>
           <a href='/'>
             <button
               className='bg-purple-800 text-white p-2 rounded-md  leading-none flex items-center'>
@@ -88,7 +86,7 @@ function NavBar () {
               </span>
             </button>
           </a>
-        </nav>
+        </div>
       </header>
     </nav>
   )
