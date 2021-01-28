@@ -27,38 +27,38 @@ function NavBar () {
                      className='block cursor-pointer px-4 text-gray-600 text-2xl'>Products</label>
               {/* eslint-disable-next-line jsx-a11y/aria-role */}
               <div role="toggle"
-                   className="p-3 mega-menu mb-12 sm:mb-0 shadow-xl bg-purple-800">
+                   className="p-2 mega-menu mb-12 sm:mb-0 shadow-xl bg-purple-800">
                 <div
                   className="container mx-auto w-full mx-2">
                   <ul
-                    className='px-4 border-gray-600 pb-6 pt-6 flex flex-row space-between'>
+                    className='px-4 border-gray-600 py-2 flex flex-row space-between'>
                     <li >
                       <a href='/'
-                         className='block p-3 text-gray-300 text-bold hover:text-white hover:bg-purple-600'>
+                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
                         Fruits
                       </a>
                     </li>
                     <li >
                       <a href='/'
-                         className='block p-3 text-gray-300 text-bold hover:text-white hover:bg-purple-600'>
+                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
                         Vegetables
                       </a>
                     </li>
                     <li >
                       <a href='/'
-                         className='block p-3 text-gray-300 text-bold hover:text-white hover:bg-purple-600'>
+                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
                         Fresh products
                       </a>
                     </li>
                     <li >
                       <a href='/'
-                         className='block p-3 text-gray-300 text-bold hover:text-white hover:bg-purple-600'>
+                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
                         Grocery
                       </a>
                     </li>
                     <li >
                       <a href='/'
-                         className='block p-3 text-gray-300 text-bold hover:text-white hover:bg-purple-600'>
+                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
                         Drinks
                       </a>
                     </li>
@@ -80,7 +80,7 @@ function NavBar () {
         <nav>
           <a href='/'>
             <button
-              className='bg-purple-800 text-white p-2 rounded  leading-none flex items-center'>
+              className='bg-purple-800 text-white p-2 rounded-md  leading-none flex items-center'>
               Cart
               <span
                 className='bg-white p-1 rounded-full text-green-700 text-xs ml-2 text-bold'>
