@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function NotFoundPage () {
   return (
@@ -12,9 +12,9 @@ function NotFoundPage () {
             Ooops!!! The page you are looking for is not found
           </p>
           <button className='bg-purple-800 text-white py-2 px-4 rounded-md mt-6 transition-colors duration-300 hover:text-white hover:shadow-md hover:bg-purple-600 lg:mt-12 lg:py-3 lg:px-6'>
-            <Link to={'/'}>
+            <NavLink to={'/'}>
               Back To Home
-            </Link>
+            </NavLink>
           </button>
         </div>
       </div>
