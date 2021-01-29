@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './navBarComponents.css'
 
 function NavBar () {
@@ -7,8 +8,8 @@ function NavBar () {
       <header
         className='border-b sticky top-0 bg-white z-10 md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4'>
         <div className='flex items-center space mb-4 md:mb-0'>
-          <a
-            href='/'
+          <Link
+            to='/'
             className='leading-none'
           >
               <p
@@ -16,7 +17,7 @@ function NavBar () {
               >
                 OneReduxShop
               </p>
-          </a>
+          </Link>
           <ul className=' ml-6 flex'>
             <li className='toggleable '>
               <input type="checkbox" value="selected" id="toggle-one"
@@ -76,7 +77,7 @@ function NavBar () {
           />
         </form>
         <div className='2xl:ml-48'>
-          <a href='/'>
+          <Link to='/cart'>
             <button
               className='bg-purple-800 text-white p-2 rounded-md  leading-none flex items-center'>
               Cart
@@ -85,7 +86,7 @@ function NavBar () {
                 0
               </span>
             </button>
-          </a>
+          </Link>
         </div>
       </header>
     </nav>

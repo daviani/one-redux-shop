@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function HomePage () {
   return (
@@ -14,10 +15,13 @@ function HomePage () {
           nemo neque non, quidem recusandae soluta tenetur! Aut eaque,
           placeat!
         </p>
-        <button
-          className='bg-purple-800 text-white py-2 px-4 rounded-md mt-6 transition-colors duration-300 hover:text-white hover:shadow-md hover:bg-purple-600 lg:mt-12 lg:py-3 lg:px-6 '>
-          View our products
-        </button>
+        <Link to='/products'>
+          <button
+            className='bg-purple-800 text-white py-2 px-4 rounded-md mt-6 transition-colors duration-300 hover:text-white hover:shadow-md hover:bg-purple-600 lg:mt-12 lg:py-3 lg:px-6 '>
+            View our products
+          </button>
+        </Link>
+
       </div>
     </div>
   )
