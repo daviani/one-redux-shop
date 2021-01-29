@@ -7,6 +7,7 @@ function NavBar () {
       <header
         className='border-b sticky top-0 bg-white z-10 md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4'>
         <div className='flex items-center space mb-4 md:mb-0'>
+          {/*Link casse le test*/}
           <a
             href='/'
             className='leading-none'
@@ -76,7 +77,7 @@ function NavBar () {
           />
         </form>
         <div className='2xl:ml-48'>
-          <a href='/'>
+          <a href='/cart'>
             <button
               className='bg-purple-800 text-white p-2 rounded-md  leading-none flex items-center'>
               Cart
