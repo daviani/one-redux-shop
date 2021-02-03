@@ -309,4 +309,4 @@ const drinks = [
   },
 ]
 
-export const list = [fruits, vegetables, fresh, grocery, drinks]
+export const products = [fruits, vegetables, fresh, grocery, drinks]
