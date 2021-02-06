@@ -7,7 +7,7 @@ import CartPage from './pages/cartPage/cartPage'
 import NotFoundPage from './pages/notFoundPage/notFoundPage'
 import { products } from '../data/products'
 
-function App () {
+const App = () => {
   const [category, setCategory] = useState(0)
   const [isFiltering, setFiltering] = useState(false)
   const [filtered, setFiltered] = useState(false)
@@ -22,15 +22,27 @@ function App () {
     })
     setFiltered(results)
   }
-  console.log(filterResults)
+
+  useEffect(() => {
+    setFiltering(isFiltering)
+  }, [isFiltering])
 
   return (
     <Router>
       <NavBar filter={filterResults}
-              setFiltering={setFiltering}/>
+              setFiltering={setFiltering}
+              loadCategory={loadCategory}
+      />
 
       <Route path='/cart' component={CartPage}/>
-      <Route path='/products' component={ProductsPage}/>
+      <Route path='/products' component={() =>
+        <ProductsPage category={category}
+                      isFiltering={isFiltering}
+                      filtered={filtered}
+                      products={products}
+        />
+      }
+      />
       <Route exact path='/' component={HomePage}/>
       <Route components={NotFoundPage}/>
     </Router>

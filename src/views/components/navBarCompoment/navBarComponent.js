@@ -1,7 +1,7 @@
 import React from 'react'
 import './navBarComponents.css'
 
-function NavBar ({ filter, setFiltering }) {
+function NavBar ({ filter, setFiltering, loadCategory }) {
   const menuLinks = [
     'fruits',
     'vegetables',
@@ -37,7 +37,8 @@ function NavBar ({ filter, setFiltering }) {
                     {menuLinks.map((menuLink, index) => {
                       return (
                         <li key={index}
-                            className='block p-3 cursor-pointer text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
+                            className='block p-3 cursor-pointer text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'
+                            onClick={() => loadCategory(index)}>
                           {menuLink}
                         </li>
                       )
@@ -68,7 +69,7 @@ function NavBar ({ filter, setFiltering }) {
               className='bg-purple-800 text-white p-2 rounded-md  leading-none flex items-center'>
               Cart
               <span
-                className='bg-white p-1 rounded-full text-green-700 text-xs ml-2 text-bold'>
+                className='bg-white p-1 rounded-full text-purple-800 text-xs ml-2 text-bold'>
                 0
               </span>
             </button>
