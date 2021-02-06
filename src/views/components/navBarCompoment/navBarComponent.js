@@ -1,22 +1,25 @@
 import React from 'react'
 import './navBarComponents.css'
 
-function NavBar () {
+function NavBar ({ filter, setFiltering, loadCategory }) {
+  const menuLinks = [
+    'fruits',
+    'vegetables',
+    'fresh',
+    'grocery',
+    'drinks']
   return (
     <nav>
       <header
         className='border-b sticky top-0 bg-white z-10 md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4'>
         <div className='flex items-center space mb-4 md:mb-0'>
           {/*Link casse le test*/}
-          <a
-            href='/'
-            className='leading-none'
-          >
-              <p
-                className='no-underline text-gray-600 text-2xl text-bold  hover:text-purple-800'
-              >
-                OneReduxShop
-              </p>
+          <a href='/' className='leading-none'>
+            <p
+              className='no-underline text-gray-600 text-2xl text-bold  hover:text-purple-800'
+            >
+              OneReduxShop
+            </p>
           </a>
           <ul className=' ml-6 flex'>
             <li className='toggleable '>
@@ -31,36 +34,16 @@ function NavBar () {
                   className="container mx-auto w-full mx-2">
                   <ul
                     className='px-4 border-gray-600 py-2 flex flex-row space-between'>
-                    <li >
-                      <a href='/'
-                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
-                        Fruits
-                      </a>
-                    </li>
-                    <li >
-                      <a href='/'
-                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
-                        Vegetables
-                      </a>
-                    </li>
-                    <li >
-                      <a href='/'
-                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
-                        Fresh products
-                      </a>
-                    </li>
-                    <li >
-                      <a href='/'
-                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
-                        Grocery
-                      </a>
-                    </li>
-                    <li >
-                      <a href='/'
-                         className='block p-3 text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'>
-                        Drinks
-                      </a>
-                    </li>
+                    {menuLinks.map((menuLink, index) => {
+                      return (
+                        <li key={index}
+                            className='block p-3 cursor-pointer text-gray-300 text-bold rounded-md hover:text-white hover:bg-purple-600'
+                            onClick={() => loadCategory(index)}>
+                          {menuLink}
+                        </li>
+                      )
+                    })
+                    }
                   </ul>
                 </div>
               </div>
@@ -74,6 +57,10 @@ function NavBar () {
             placeholder='Search...'
             aria-label='Search...'
             type='search'
+            onChange={(e) => {
+              setFiltering(e.target.value.length > 0)
+              filter(e.target.value)
+            }}
           />
         </form>
         <div className='2xl:ml-48'>
@@ -82,7 +69,7 @@ function NavBar () {
               className='bg-purple-800 text-white p-2 rounded-md  leading-none flex items-center'>
               Cart
               <span
-                className='bg-white p-1 rounded-full text-green-700 text-xs ml-2 text-bold'>
+                className='bg-white p-1 rounded-full text-purple-800 text-xs ml-2 text-bold'>
                 0
               </span>
             </button>

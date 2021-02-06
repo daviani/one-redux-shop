@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CartPage () {
+const CartPage = () => {
   return (
     <div
       className='flex content-center mt-28 p-6 text-center max-w-xl mx-auto my-auto bg-gray-100 rounded-md shadow-md lg:py-16 lg:px-8'>
