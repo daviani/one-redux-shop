@@ -1,6 +1,6 @@
 import React from 'react'
 import ListProducts
-  from '../../components/listProductsComponent/listProductsComponent'
+  from '../../components/listProducts/listProductsComponent'
 
 const ProductsPage = props => {
   const { isFiltering, filtered, products, category } = props

@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductCard
-  from '../../components/productsCardComponent/productCardComponent'
+  from '../productsCard/productCardComponent'
 
 const ListProducts = props => {
   const { data } = props

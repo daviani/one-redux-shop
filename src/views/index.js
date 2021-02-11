@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import NavBar from './components/navBarCompoment/navBarComponent'
+import NavBar from './components/navBar/navBarComponent'
 import HomePage from './pages/homePage/homePage'
 import ProductsPage from './pages/productsPage/productsPage'
 import CartPage from './pages/cartPage/cartPage'
@@ -33,8 +33,6 @@ const App = () => {
               setFiltering={setFiltering}
               loadCategory={loadCategory}
       />
-
-      <Route path='/cart' component={CartPage}/>
       <Route path='/products' component={() =>
         <ProductsPage category={category}
                       isFiltering={isFiltering}
@@ -43,6 +41,7 @@ const App = () => {
         />
       }
       />
+      <Route path='/cart' component={CartPage}/>
       <Route exact path='/' component={HomePage}/>
       <Route components={NotFoundPage}/>
     </Router>
